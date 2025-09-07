@@ -1,8 +1,6 @@
-// Helpers
 const $ = (s, c=document)=>c.querySelector(s);
 const $$ = (s, c=document)=>Array.from(c.querySelectorAll(s));
 
-/* Smooth scroll with sticky-header offset */
 const header = $('.site-header');
 const offsetTop = el => el.getBoundingClientRect().top + window.scrollY - (header?.offsetHeight || 0) - 6;
 $$('a[href^="#"]').forEach(a=>{
@@ -15,7 +13,7 @@ $$('a[href^="#"]').forEach(a=>{
   });
 });
 
-/* Mobile menu toggle (accessibility) */
+
 const toggleBtn = $('.menu-toggle');
 const nav = toggleBtn ? document.getElementById(toggleBtn.getAttribute('aria-controls')) : null;
 if(toggleBtn && nav){
@@ -33,7 +31,6 @@ if(toggleBtn && nav){
   });
 }
 
-/* Reveal-on-scroll animations via IntersectionObserver */
 const reveals = $$('.reveal');
 if('IntersectionObserver' in window && reveals.length){
   const io = new IntersectionObserver((entries)=>{
