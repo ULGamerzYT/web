@@ -1,4 +1,19 @@
+:root{
+  --bg:#0a0a0a;        /* pure dark background */
+  --panel:#121316;     /* elevated surface */
+  --text:#e8ecf1;
+  --muted:#9aa3b2;
+  --accent:#ff6b6b;    /* accent for headings span */
+  --card:#16181d;
+  --border:rgba(255,255,255,.08);
 
+  /* neon colors */
+  --neon-pink:#ff3cac;
+  --neon-green:#39ff14;
+  --neon-blue:#00e7ff;
+
+  --container:1100px;
+}
 
 *{box-sizing:border-box}
 body{
